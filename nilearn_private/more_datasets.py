@@ -98,9 +98,12 @@ def fetch_abide_movements(data_dir=None, n_subjects=None, sort=True, verbose=0,
 
     name_csv = 'Phenotypic_V1_0b.csv'
     dataset_dir = _get_dataset_dir('abide_movements', data_dir=data_dir)
+    #path_csv = _fetch_files('abide_movements', [(name_csv,
+    #    'file:' + os.path.join('dataset', name_csv), {})],
+    #                        data_dir=data_dir)[0]
+
     path_csv = _fetch_files('abide_movements', [(name_csv,
-        'file:' + os.path.join('dataset', name_csv), {})],
-                            data_dir=data_dir)[0]
+        'file:' + os.path.join('dataset', name_csv), {})])[0]
 
     # The situation is a bit complicated here as we will load movements
     # depending on whether they are provided or not. We load a file just to
